@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reservacion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="titulo1">RESTAURANT FOOD
+        <img class="logo" src="img/logo.png" alt="gatito"></h1>
+
+<div id="registro">
+    <h1 class="tituloreserv"> REGISTRAR RESERVACION </h1>
+    <form action="">
+        <div class="lab1">
+        <label class="lab" for="nombre"> NOMBRE: </label>
+        <input class="inp" type="text" id="nombre" name="nombre" required><br>
+
+        <label class="lab" for="fecha"> FECHA:</label>
+        <input  class="inp" type="date" id="fecha" name="fecha" required><br>
+
+        <label class="lab" for="hora"> HORA: </label>
+        <input  class="inp" type="time" id="hora" name="hora" required><br>
+
+        <label class="lab" for="personas"> NUMERO DE PERSONAS: </label>
+        <input  class="inp" type="number" id="personas" name="personas" min="1" required><br>
+
+        <div id="container">
+            <h2>Selecciona el combo a elegir:</h2>
+            <form id="combos">
+                <label> <input type="checkbox" name="combo" value="Combo 1"> COMBO 1 <br> "¡Disfruta de una experiencia gastronómica única con nuestro combo especial! Deléitate con nuestra exquisita pechuga cordon bleu, acompáñala con nuestro irresistible cheesecake de fresa y refresca tu paladar con nuestra refrescante agua de naranja. ¡Una combinación que no puedes perderte en nuestro restaurante!" </label><br>
+
+                <label> <input type="checkbox" name="combo" value="Combo 2"> COMBO 2 <br> "¡Satisface tus antojos con nuestro irresistible combo: una deliciosa lasaña, seguida de un cheesecake de fresa tentador, acompañado de refrescante limonada y rematado con un indulgente frapuchino! ¡Una explosión de sabores que te dejará deseando más en cada bocado!" <br> !POR SOLO 180 $!  </label><br>
+
+                <label> <input type="checkbox" name="combo" value="Combo 3"> COMBO 3 <br> "¡Disfruta de una explosión de sabores con nuestro irresistible combo! Deléitate con nuestra exquisita lasaña, el clásico spaghetti a la boloñesa, refresca tu paladar con agua de piña y completa tu experiencia con un dulce final: pastel de chocolate acompañado de un aromático café. ¡Una experiencia gastronómica completa te espera en nuestro restaurante!" <br> ! POR SOLO 160 $ !</label><br>
+
+                <label> <input type="checkbox" name="combo" value="Combo 4"> COMBO 4 <br>OFERTA POSTRES <br> "¡Dulce oferta que no puedes resistir! Por cada tres postres que disfrutes, el cuarto es ¡totalmente gratis! ¡Ven y endulza tu día con nosotros en <br> RESTAURANT FOOD !" </label><br>
+
+                <label> <input type="checkbox" name="combo" value="Combo 5"> COMBO 5 <br>!OFERTA FELIZ CUMPLEAÑOS! <br> "¡Celebra tu cumpleaños con nosotros y deja que te consintamos! En tu día especial, lo que pidas es ¡GRATIS!" (solo el cumpleañero)  </label><br>
+                <button type="button" onclick="mostrarSeleccion()">Mostrar selección</button>
+            </form>
+
+            <script src="script.js"></script>
+            <div id="seleccion"></div>
+
+        <input class="btn" type="submit" value="GUARDAR RESERVACION">
+
+    </div>
+    </form>
+
+
+</div>
+</body>
+</html>

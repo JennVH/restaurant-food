@@ -1,0 +1,275 @@
+
+body{
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+}
+
+.hidden {
+    display: none;
+}
+
+.titulo1 {
+    display: flex;
+    justify-content: center;
+    font-family:"Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 5px solid #b23ad7;
+    margin: 60px;
+}
+
+.img1 {
+    align-items: center;
+    mix-blend-mode: darken;
+    justify-content: end;
+    width: 200px;
+}
+
+
+#carrito, #pedido1 {
+    display: inline-grid;
+    width: 40%;
+    vertical-align: top;
+    padding: 30px;
+    margin: 20px;
+}
+
+#pedido1{
+    border-radius: 20px;
+}
+
+
+label{
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input {
+    background-color:#e7add5;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border:none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#carrito{
+    text-align: end;
+    border-radius: 20px;
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#carrito h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-carrito li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.nota{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
+
+textarea {
+    background: #e7add5;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu1{
+    padding: 20px;
+    margin: 10px;
+    margin-left: 30px;
+    border-bottom: 2px solid #000;
+}
+
+#menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+div#menu{
+    background: #cb42f5;
+    border-radius: 10px;
+    display: flex;
+    margin:40px
+}
+
+ul#platillos , ul#postres , ul#bebidas{
+    margin-top: 200px;
+    position:absolute
+
+}
+
+h2{
+    margin: 40px;
+    padding: 20px;
+}
+
+.li img{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    margin-left: 35%;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+button {
+    background-color:rgb(162, 90, 185);
+    color: #010101;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.li {
+    width: 30%;
+    background: linear-gradient(to right, #e7add5, #cb42f5);
+    height: 400px;
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.li p{
+    margin: 10px;
+    font-family:"Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.li span{
+    margin: 0;
+    font-family:"Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.li button {
+    display: block;
+    margin-top: auto;
+}
+
+.reserva{
+    font-family:"Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+    text-decoration: none;
+    color: black;
+    margin: 50px;
+    padding: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    align-items: center;
+    mix-blend-mode: darken;
+    justify-content: end;
+    width: 200px;
+}
+
+.tituloreserv{
+    margin: 70px;
+    padding: 40px;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.lab1{
+    margin: 20px;
+    font-family: "Libre Baskerville", serif;
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label.lab{
+    font-style: italic;
+    justify-content: center;
+    margin: 30px;
+}
+
+input.inp {
+    justify-content: center;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.2) 30px 30px 30px;
+}
+
+div.lab1{
+    margin: 20px 480px;
+    justify-content: center;
+    display: block;
+    width: 500px;
+    height: auto;
+    align-items: center;
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.5);
+}
+
+ .btn{
+    margin-top: 40px;
+    background: linear-gradient(to left, #e7add5, #cb42f5);
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.5);
+    font-family:"Libre Baskerville", serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+div#seleccion {
+    font-size: 25px;
+}

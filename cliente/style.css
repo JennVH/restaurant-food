@@ -1,0 +1,495 @@
+
+body{
+    background:rgb(243, 124, 245)
+}
+
+.titulo1 {
+    display: flex;
+    justify-content: center;
+    font-family:"Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 40px;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    align-items: center;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img1{
+    mix-blend-mode: darken;
+    justify-content: end;
+    width: 300px;
+}
+
+header{
+      width: 100%;
+}
+
+.navegacion{
+    width: 1000px;
+    margin: 40px auto;
+    background: #dc58b2;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navegacion ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.menu  > li{
+    position: relative;
+    display: inline-block;
+    background-color: #f10da9;
+    border-radius: 10px;
+    border: 2px solid #d017b4;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589) ;
+}
+
+.menu  > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'opens sans';
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: #51cdd8;
+    transition: all .3s;
+}
+
+.submenu{
+    position: absolute;
+    background: #333333;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu li a{
+    display: block;
+    margin: 45px;
+    color: #fff;
+    font-family: 'opens sans';
+    text-decoration: none;
+    text-align: justify;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.img2{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    margin: 50px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cont1{
+    display: inline-flex;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont1 p {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    margin: 40px;
+    padding: 40px;
+}
+.cont1 img{
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont2{
+    display: inline-flex;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont2 p{
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    margin: 40px;
+    padding: 40px;
+}
+
+.cont2 img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont3{
+    display: inline-flex;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont3 p {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    margin: 40px;
+    padding: 40px;
+}
+
+.cont3 img{
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont4{
+    display: inline-flex;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont4 p{
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    margin: 40px;
+    padding: 40px;
+}
+
+.cont4 img{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont5{
+    display: inline-flex;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cont5 p{
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    margin: 40px;
+    padding: 40px;
+}
+
+.cont5 img{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: rgb(130, 15, 122);
+}
+
+.pie-pagina .grupo1{
+    margin-top: 60px;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 20px 0px;
+}
+.pie-pagina .grupo1 .box figure{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: darken;
+}
+
+.pie-pagina .grupo1 .box figure img{
+    width:250px;
+}
+
+.pie-pagina .grupo2{
+    background-color: #5b0c4e;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+
+  /*                  MENU                 */
+
+h2{
+    margin-top: 30px;
+    background: #dc58b2;
+    font-size: 29px;
+    padding: 20px;
+    margin: 50px;
+    margin-left: 30px;
+    border-bottom: 2px solid #000;
+    box-shadow: 30px 30px 30px rgba( 0.9, 1, 1, 0.3)
+}
+
+.con {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.con .imagen{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    background: linear-gradient(to right, #e7add5, #cb42f5);
+    border-radius: 20px;
+    box-shadow: 30px 30px 30px rgba( 1, 0.1, 0.1);
+}
+
+.text {
+    position: absolute;
+    display: flex;
+    transform: translate(0%, 250%);
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 50px rgba(1, 0, 0, 0.452);
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+  /*             PROMOCIONES          */
+
+.combo1 {
+    display: inline-flex;
+    margin-top: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba( 0.1, 0, 0, 0.5);
+}
+
+.combo1  .tex {
+    position: absolute;
+    transform: translate(180%, -50%);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo1  .imgprom{
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    mix-blend-mode: darken;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo1 .tex2{
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding: 40px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo2 {
+    display: inline-flex;
+    margin-top: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba( 0.1, 0, 0, 0.5);
+}
+
+.combo2  .tex {
+    position: absolute;
+    transform: translate(400%, -50%);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo2  .imgprom{
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    mix-blend-mode: darken;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+  }
+
+.combo2 .tex2{
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding: 40px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo3 {
+    display: inline-flex;
+    margin-top: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba( 0.1, 0, 0, 0.5);
+}
+
+.combo3  .tex {
+    position: absolute;
+    transform: translate(180%, -50%);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo3  .imgprom{
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    mix-blend-mode: darken;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo3 .tex2{
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding: 40px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.combo4 {
+    display: inline-flex;
+    margin: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba( 0.1, 0, 0, 0.5);
+}
+
+.combo4  .tex {
+    position: absolute;
+    transform: translate(200%, -50%);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo4  .imgprom{
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    mix-blend-mode: darken;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo4 .tex2{
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding: 40px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo5 {
+    display: inline-flex;
+    margin: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba( 0.1, 0, 0, 0.5);
+}
+
+.combo5  .tex {
+    position: absolute;
+    transform: translate(20%, -50%);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+.combo5  .imgprom{
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    mix-blend-mode: darken;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo5 .tex2{
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    padding: 40px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}

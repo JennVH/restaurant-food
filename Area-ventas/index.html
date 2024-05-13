@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apartado ventas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="titulo1">RESTAURANT FOOD
+<img class="img1" src="img/logo.png" alt="gatito"></h1>
+
+
+<a class="reserva" href="reservacion.html"> REGISTRAR RESERVACION </a>
+
+<form id="pedido-form">
+<div id="pedido1">
+<h1> TOMA DE PEDIDO </h1>
+  <label for="nombre-cliente">Nombre del Cliente:</label>
+  <input type="text" id="nombre-cliente" required>
+  <label for="numero-mesa">Número de Mesa:</label>
+  <input type="number" id="numero-mesa" required>
+  <label for="numero-pedido">Número de pedido:</label>
+  <input type="number" id="numero-pedido" required>
+</div>
+
+<div id="carrito">
+  <h1>CARRITO</h1>
+  <ul id="lista-carrito"></ul>
+  <p>Total a Pagar: $<span id="total">0</span></p>
+  </div>
+  <script src="script.js"></script>
+
+<div class="nota">
+  <label for="notas">Notas Especiales:</label><br>
+  <textarea id="notas" rows="4"></textarea><br>
+  <button type="submit">Enviar Pedido</button>
+</div>
+
+<h1 class="menu1">MENU</h1>
+  <div id="menu">
+    <h2 onclick="toggleVisibility('platillos')" >PLATILLOS</h2>
+    <ul id="platillos">
+    <li class="li"><span>CORDON BLEU</span>  <p> $100</p>
+      <img src="img/CORDON BLEU.jpeg" alt="" width="100px" height="100px">
+      <P> Pechuga de pollo rellena con queso mozzarella y jamón, empanizada y luego frita</P>
+      <button onclick="agregarProducto('CORDON BLEU', 100)"> + </button></li>
+
+    <li class="li"><span>COSTILLAS EN SALSA DE PIÑA</span> <p>$120</p>
+      <img src="img/Costillas.jpeg" alt="" width="100px" height="100px">
+      <P> costillas de cerdo cocidas, cubiertas con una salsa agridulce hecha de piña, junto con otros ingredientes como azúcar, vinagre, salsa de soja y especias</P>
+      <button onclick="agregarProducto('COSTILLAS', 120)"> + </button></li>
+
+    <li class="li"><span>ENCHILADAS SUIZAS </span> <p>$80</p>
+      <img src="img/enchiladas suizas.jpeg" alt="" width="100px" height="100px">
+      <P>Tortillas rellenas de pollo deshebrado, bañadas en una salsa verde cremosa hecha a base de tomate, chile verde y crema, y luego gratinadas con queso rallado.</P>
+      <button onclick="agregarProducto('ENCHILADAS', 80)"> + </button></li>
+
+    <li  class="li"><span>LASAÑA</span> <p>$100</p>
+      <img src="img/Lasaña.jpeg" alt="" width="100px" height="100px">
+      <P>Capas de pasta intercaladas con salsa de tomate, carne picada y queso</P>
+      <button onclick="agregarProducto ('LASAÑA', 100)"> + </button></li>
+
+    <li  class="li"><span>PAPA RELLENA </span> <p>$90</p>
+      <img src="img/papa rellena.jpeg" alt="" width="100px" height="100px">
+      <P>Papa entera cocida en su piel en un horno se sirve con una variedad de condimentos como mantequilla, crema agria y queso rallado</P>
+      <button onclick="agregarProducto ('PAPA-RELLENA', 90)"> + </button></li>
+
+    <li  class="li"><span>RAMEN</span>  <p>$120</p>
+      <img src="img/ramen.jpeg" alt="" width="100px" height="100px">
+      <P>Plato de fideos con salsa de soja, miso o sal. Se acompaña con cerdo cocido, huevo marinado, cebolla verde, brotes de bambú y alga nori,</P>
+      <button onclick="agregarProducto ('RAMEN', 120)"> + </button></li>
+
+    <li  class="li"><span> SALMON </span> <p>$150</p>
+      <img src="img/Salmón.jpeg" alt="" width="100px" height="100px">
+      <P>Salmón con una salsa cremosa y aromática hecha a base de champiñones. La salsa se prepara generalmente con champiñones frescos, cebolla, ajo, vino blanco y crema</P>
+      <button onclick="agregarProducto ('SALMON', 150)"> + </button></li>
+
+    <li class="li"><span>SPAGHETTI</span>  <p>$90</p>
+      <img src="img/Spaghetti.jpeg" alt="" width="100px" height="100px">
+      <P>Spagueti con una salsa de carne. La salsa boloñesa contiene carne picada, cebolla, zanahoria, apio, tomate, vino y hierbas</P>
+      <button onclick="agregarProducto ('SPAGHETTI', 90)"> + </button></li>
+
+    <li  class="li"><span>SUSHI</span> <p>$200</p>
+      <img src="img/sushi.jpeg" alt="" width="100px" height="100px">
+      <P> rollos de sushi relleno de arroz y de pescado o vegetales en su interior recubiertos con una capa de pan rallado y luego fritos brevemente.</P>
+      <button onclick="agregarProducto ('SUSHI', 200)"> + </button></li>
+  </ul>
+
+<h2 onclick="toggleVisibility('postres')" >POSTRES</h2>
+  <ul id="postres">
+    <li class="li"><span>REBANADA CHOCOFLAN</span>  <p>$40</p>
+      <img src="img/Chocoflan.jpeg" alt="" width="100px" height="100px">
+      <P>Una rebanada de chocoflan es un postre delicioso que combina dos clásicos: el flan cremoso y el pastel de chocolate</P>
+      <button onclick="agregarProducto('CHOCOFLAN', 40)"> + </button></li>
+
+    <li class="li"><span> REBANADA CHEESECAKE FRESA</span> <p>$45</p>
+      <img src="img/fresapastel.jpeg" alt="" width="100px" height="100px">
+      <P> Postre con base crujiente de galleta, seguida de una capa cremosa de queso crema y coronada con una porción de  mermelada.</P>
+      <button onclick="agregarProducto('CHEESECAKE-FRESA', 45)"> + </button></li>
+
+    <li class="li"><span>REBANADA CHEESECAKE OREO</span> <p>$40</p>
+      <img src="img/Oreo.jpeg" alt="" width="100px" height="100px">
+      <P> Base de galleta triturada de Oreo, seguida de una cremosa capa de queso crema mezclado con trozos de galleta Oreo</P>
+      <button onclick="agregarProducto('CHEESECAKE-OREO', 40)"> + </button></li>
+
+    <li class="li"><span> CUPCAKE</span> <p>$20</p>
+      <img src="img/Cupcake.jpg" alt="" width="100px" height="100px">
+      <P>Una base suave y esponjosa de masa de chocolate, coronada con una generosa porción de glaseado de chocolate cremoso</P>
+      <button onclick="agregarProducto('CUPCAKE', 20)"> + </button></li>
+
+    <li class="li"><span> REBANADA PASTEL DE CHOCOLATE</span> <p>$25</p>
+      <img src="img/pastelchocolate.jpeg" alt="" width="100px" height="100px">
+      <P> Con su capa esponjosa y húmeda de bizcocho de chocolate, esta rebanada promete una explosión de sabor a cacao en cada bocado. </P> <button onclick="agregarProducto('PASTEL', 25)"> + </button></li>
+
+    <li class="li"><span> FLAN </span> <p>$25</p>
+        <img src="img/flan.jpeg" alt="" width="100px" height="100px">
+        <P>Es una delicia que combina la dulzura sutil del caramelo con la riqueza de los huevos y la leche</P> <button onclick="agregarProducto('FLAN', 25)"> + </button></li>
+
+    <li class="li"><span> PASTEL TRES LECHES </span> <p>$25</p>
+        <img src="img/tresleches.jpeg" alt="" width="100px" height="100px">
+        <P>postre esponjoso y decadente empapado en una mezcla de tres tipos de leche: leche evaporada, leche condensada y crema de leche</P> <button onclick="agregarProducto('TRES-LECHES', 25)"> + </button></li>
+
+    <li class="li"><span> HELADO NAPOLITANO </span> <p>$20</p>
+        <img src="img/helado.jpeg" alt="" width="100px" height="100px">
+        <P>Deliciosa combinación de tres sabores clásicos fresa, vainilla y chocolate en un solo envase.</P> <button onclick="agregarProducto('HELADO', 20)"> + </button></li>
+
+    <li class="li"><span> HOTCAKES </span> <p>$25</p>
+        <img src="img/hotcakes.jpeg" alt="" width="100px" height="100px">
+        <P>Orden de 4 hotcakes cocinados a la perfección y esponjosos por dentro</P> <button onclick="agregarProducto('HOTCAKES', 25)"> + </button></li>
+  </ul>
+
+<h2 onclick="toggleVisibility('bebidas')"> BEBIDAS </h2>
+  <ul id="bebidas">
+    <li class="li"><span>LIMONADA</span> <p>$20</p>
+      <img src="img/limonada.jpeg" alt="" width="100px" height="100px">
+      <P> 448 ml</P>
+      <button onclick="agregarProducto('LIMONADA', 20)"> + </button></li>
+
+    <li class="li"><span>JAMAICA</span> <p>$20</p>
+      <img src="img/jamaica.png" alt="" width="100px" height="100px">
+      <P> 448 ml </P>
+      <button onclick="agregarProducto('JAMAICA', 20)"> + </button></li>
+
+      <li class="li"><span>JUGO DE FRUTAS </span> <p>$30</p>
+      <img src="img/aguafrutas.png" alt="" width="100px" height="100px">
+      <P>448 ml</P>
+      <button onclick="agregarProducto('JUGO-FRUTAS', 30)"> + </button></li>
+
+    <li class="li"><span>JUGO NARANJA</span> <p>$20</p>
+      <img src="img/naranja.png" alt="" width="100px" height="100px">
+      <P>448 ml</P>
+      <button onclick="agregarProducto('NARANJA', 20)"> + </button></li>
+
+    <li class="li"><span>JUGO FRESA</span> <p>$25</p>
+      <img src="img/Agua De Fresa.jpeg" alt="" width="100px" height="100px">
+      <P>448 ml</P>
+      <button onclick="agregarProducto('FRESA', 25)"> + </button></li>
+
+    <li class="li"><span>JUGO PIÑA</span> <p>$25</p>
+      <img src="img/piña.jpeg" alt="" width="100px" height="100px">
+      <P>448 ml</P>
+      <button onclick="agregarProducto('PIÑA', 25)"> + </button></li>
+
+    <li class="li"><span>CAFE</span> <p>$20</p>
+      <img src="img/cafe.jpeg" alt="" width="100px" height="100px">
+      <P>Una taza de cafe con leche</P>
+      <button onclick="agregarProducto('CAFE', 20)"> + </button></li>
+
+    <li class="li"><span>FRAPUCHINO</span> <p>$30</p>
+      <img src="img/frapuchino.jpeg" alt="" width="100px" height="100px">
+      <P>Combinación de café espresso perfectamente mezclado con hielo picado y una cremosa base láctea</P>
+      <button onclick="agregarProducto('FRAPUCHINO', 30)"> + </button></li>
+
+    <li class="li"><span>CAFE CAPPUCCINO</span> <p>$25</p>
+      <img src="img/cappuchino.png" alt="" width="100px" height="100px">
+      <P>Nuestro capuchino elaborado con granos de café de la más alta calidad y una capa de espuma de leche suave y cremosa </P>
+      <button onclick="agregarProducto('CAPPUCCINO', 25)"> + </button></li>
+  </ul>
+</div>
+</form>
+</body>
+</html>
