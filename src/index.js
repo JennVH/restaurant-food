@@ -3,13 +3,17 @@ import Express from 'express'
 import { render } from './utils.js'
 import { router } from './routes.js'
 import { api } from './api.js'
+import Multer from "multer"
+
+const multer = Multer()
 
 const app = Express()
 const PORT = 3000
 process.env.SERVER_URL = 'http://localhost:3000'
 
 app.use(Express.json())
-app.use(Express.urlencoded({ extended: true }))
+app.use(multer.array())
+app.use(Express.urlencoded({ extended: false }))
 
 app.use('/', router)
 app.use('/', api)

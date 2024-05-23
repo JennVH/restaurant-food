@@ -13,10 +13,10 @@
 
 <div id="registro">
     <h1 class="tituloreserv"> REGISTRAR RESERVACION </h1>
-    <form action="">
+    <form action="" method="post">
         <div class="lab1">
         <label class="lab" for="nombre"> NOMBRE: </label>
-        <input class="inp" type="text" id="nombre" name="nombre" required><br>
+        <input class="inp" type="text" id="nombre" name="nombre" required ><br>
 
         <label class="lab" for="fecha"> FECHA:</label>
         <input  class="inp" type="date" id="fecha" name="fecha" required><br>
@@ -26,6 +26,10 @@
 
         <label class="lab" for="personas"> NUMERO DE PERSONAS: </label>
         <input  class="inp" type="number" id="personas" name="personas" min="1" required><br>
+        
+        <input type="hidden" name="item" value="5875646">
+        <input type="hidden" name="item" value="75857">
+        <input type="hidden" name="item" value="653753">
 
         <div id="container">
             <h2>Selecciona el combo a elegir:</h2>
