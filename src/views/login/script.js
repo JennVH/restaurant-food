@@ -3,8 +3,9 @@ function validateLogin() {
     var password = document.getElementById("password").value;
 
     var users = {
+      
         ventas: { password: "contraseñaventas", redirect: "/Area-ventas/index.html" },
-        gerencia: { password: "contraseñagerencia", redirect: "/gerencia/index.html" }
+        gerencia: { password: "contraseñagerencia", redirect: "/Area-gerencia/index.html" }
     };
 
     if (users.hasOwnProperty(username) && users[username].password === password) {
