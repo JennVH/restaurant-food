@@ -48,4 +48,13 @@ api.post('/api/pedido', async (req, res) => {
 })
 
 
+api.get('/api/menu/', async (req, res) => {
+    const [query] = await db.query( sql`
+    select * from platillo ;
+    `)
+    res.json(query)
+    console.log(query);
+})
+
+
 

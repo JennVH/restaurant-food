@@ -266,8 +266,8 @@ h2{
 }
 
 .con .imagen{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin: 20px;
     padding: 10px;
     background: linear-gradient(to right, #e7add5, #cb42f5);

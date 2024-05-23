@@ -14,6 +14,7 @@ process.env.SERVER_URL = 'http://localhost:3000'
 app.use(Express.json())
 app.use(multer.array())
 app.use(Express.urlencoded({ extended: false }))
+app.use(Express.static('src/public'))
 
 app.use('/', router)
 app.use('/', api)
