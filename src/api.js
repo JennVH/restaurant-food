@@ -16,13 +16,12 @@ api.post('/api/pedido', async (req, res) => {
 
     //pedido
     const total = form.get('total')
-    const subtotal = form.get('subtotal')
-    const puesto = form.get('puesto')
-    const mesa = form.get('mesa')
+    const puesto = form.get('id_Puesto')
+    const mesa = form.get('id_Mesa')
     const [pedido] = await db.query(sql`
-    insert (Total, Subtotal, Fecha_Compra, id_Puesto, id_Mesa, Habilitado)
+    insert (Total, Fecha_Compra, id_Puesto, id_Mesa, Habilitado)
     into pedido
-    values (${total}, ${subtotal}, ${new Date()}, ${puesto}, ${mesa}, ${true}`)
+    values (${total},  ${new Date()}, ${puesto}, ${mesa}, ${true}`)
 
     //orden
     const id_platillos = form.getAll('platillos')
@@ -50,11 +49,71 @@ api.post('/api/pedido', async (req, res) => {
 
 api.get('/api/menu/', async (req, res) => {
     const [query] = await db.query( sql`
-    select * from platillo ;
+    select * from platillo where id_Categoria = 1;
     `)
     res.json(query)
+    console.log("-inicia menu");
     console.log(query);
+    console.log("-fif menu")
+
 })
 
 
+api.get('/api/postres', async (req, res) => {
+    const [query] = await db.query(sql`
+    select * from proyecto.platillo where id_Categoria = 2;
+    `)
+    res.json(query)
+    console.log("-inicia postre");
+    console.log(query);
+    console.log("-fin menu");
+})
 
+
+api.get('/api/bebidas', async (req, res) => {
+    const [query] = await db.query(sql`
+    select * from proyecto.platillo where id_Categoria = 3
+    `)
+    res.json(query)
+    console.log("-inicia bedidas");
+    console.log(query);
+    console.log("-fin bedidas");
+})
+
+
+api.get('/api/bebidas1', async (req, res) => {
+    let var_id_Categoria = req.query.name;
+
+    const [query] = await db.query(sql`
+    select * from proyecto.platillo where id_Categoria = ${var_id_Categoria}
+    `)
+    res.json(query)
+    console.log("-inicia bedidas");
+    console.log(query);
+    console.log("-fin bedidas");
+})
+
+api.post('/api/bebidas1', async (req, res) => {
+    let var_id_Categoria = req.body.name;
+
+    const [query] = await db.query(sql`
+    insert into platillo (Nombre_Platillo) values(${var_id_Categoria})
+    `)
+    res.json(query)
+    console.log("-inicia bedidas");
+    console.log(query);
+    console.log("-fin bedidas");
+})
+
+api.post('/api/pedido', async (req, res) => {
+    /** @type {FormData} */
+    const form = req.body
+    const total = form.get('total')
+    const nombrecliente = form.get('nombre-cliente')
+    const id_Mesa = form.get('numero-mesa')
+    const descripcion = form.get('notas')
+    const [pedido] = await db.query(sql`
+    insert (total, Fecha_Compra, nombrecliente, id_Mesa, Habilitado)
+    into pedido
+    values (${total},  ${new Date()}, ${nombrecliente}, ${id_Mesa}, ${true} , ${notas}`)
+})
