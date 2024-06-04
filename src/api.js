@@ -19,11 +19,11 @@ api.post('/api/pedido', async (req, res) => {
     const puesto = form.get('id_Puesto')
     const mesa = form.get('id_Mesa')
     const [pedido] = await db.query(sql`
-    insert (Total, Fecha_Compra, id_Puesto, id_Mesa, Habilitado)
-    into pedido
-    values (${total},  ${new Date()}, ${puesto}, ${mesa}, ${true}`)
+    insert   into pedido (Total, Fecha_Compra, id_Puesto, id_Mesa, Habilitado)
+  
+    values (${total},  ${new Date()}, ${puesto}, ${mesa}, ${true})   `)
 
-    //orden
+    // orden
     const id_platillos = form.getAll('platillos')
     const platillos = []
     for (const id of id_platillos) {
@@ -37,8 +37,8 @@ api.post('/api/pedido', async (req, res) => {
     //platillo
     for (const platillo of platillos) {
         const [orden] = await db.query(sql`
-        insert (Precio_Venta, Cantidad, Fecha_Orden, id_Pedido, id_Platillo, Habilitado)
-        into orden
+        insert  into orden(Precio_Venta, Cantidad, Fecha_Orden, id_Pedido, id_Platillo, Habilitado)
+        
         values (${platillo.Precio}, ${1}, ${new Date()}, ${pedido.insertId}, ${platillo.id_Platillo}, ${true})`)
     }
 
@@ -105,15 +105,16 @@ api.post('/api/bebidas1', async (req, res) => {
     console.log("-fin bedidas");
 })
 
-api.post('/api/pedido', async (req, res) => {
-    /** @type {FormData} */
-    const form = req.body
-    const total = form.get('total')
-    const nombrecliente = form.get('nombre-cliente')
-    const id_Mesa = form.get('numero-mesa')
-    const descripcion = form.get('notas')
-    const [pedido] = await db.query(sql`
-    insert (total, Fecha_Compra, nombrecliente, id_Mesa, Habilitado)
-    into pedido
-    values (${total},  ${new Date()}, ${nombrecliente}, ${id_Mesa}, ${true} , ${notas}`)
-})
+// api.post('/api/pedido', async (req, res) => {
+   // /** @type {FormData} */
+   // const form = req.body
+   // const total = form.get('total')
+    //const nombrecliente = form.get('nombre-cliente')
+    //const id_Mesa = form.get('numero-mesa')
+    //const descripcion = form.get('notas')
+    //const [pedido] = await db.query(sql`
+    //insert (total, nombrecliente,  id_Mesa, descripcion,  Habilitado)
+    //into pedido
+    //values (${total},  ${new Date()}, ${nombrecliente}, ${id_Mesa}, ${true} , ${notas})
+    //`)
+//}) 
